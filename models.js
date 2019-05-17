@@ -1,5 +1,5 @@
 
-
+//test
 
 class disease{//constant diseases array
     constructor(name,infectious){
