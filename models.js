@@ -1,6 +1,6 @@
 
-//test
-test
+//test2
+
 class disease{//constant diseases array
     constructor(name,infectious){
         this.id=++disease.counter;
