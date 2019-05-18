@@ -1,16 +1,41 @@
 
 
 
-class disease{//constant diseases array
-    constructor(name,infectious){
-        this.id=++disease.counter;
+let diseaseTemplates=[];
+
+class diseaseTemplate{//constant diseases array
+    constructor(name){
+        this.id=++diseaseTemplate.counter;
         this.name=name;
+        //this.infectious=infectious;
+
+
+    }
+}
+diseaseTemplate.counter=0;
+
+function fillDiseaseTemplates() {
+    diseaseTemplates.push(new diseaseTemplate("rabies"));
+    diseaseTemplates.push(new diseaseTemplate("Canine distemper "));
+    diseaseTemplates.push(new diseaseTemplate("canine hepatitis"));
+    diseaseTemplates.push(new diseaseTemplate("Brucellosis"));
+    diseaseTemplates.push(new diseaseTemplate("Lyme "));
+    diseaseTemplates.push(new diseaseTemplate("Hookworm "));
+    diseaseTemplates.push(new diseaseTemplate("Hydatid tapeworm"));
+
+}
+
+fillDiseaseTemplates();
+
+
+class disease{//constant diseases array
+    constructor(diseaseTemplate,infectious){
+        this.diseaseTemplate=diseaseTemplate;
         this.infectious=infectious;
 
 
     }
 }
-disease.counter=0;
 
 
 class anatomicSizes{

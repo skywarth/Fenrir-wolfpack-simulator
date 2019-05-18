@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jscolor.js"></script>
+
 
 </head>
 <body style="background-color: black;">
@@ -62,13 +64,46 @@ test
 <br><br>
 
 
+
 <span style="color: azure">Wolf</span><br>
-<span style="color: azure">Anatomic</span>
+<input type="text" id="tagID"><br>
+<input type="text" id="nickname"><br>
 
 
+<span style="color: azure">Anatomic</span><br>
+<input type="text" id="jaw"><br>
+<input type="text" id="foreLegHeight"><br>
+<input type="text" id="pawDiameter"><br>
+<input type="text" id="skullDiameter"><br>
+
+
+<span style="color: azure">Diseases</span>
+
+
+<div class="" id="diseases">
+
+</div>
+<input type="button" id="addDisease"><br>
+
+<input type="text" id="characteristics"><br>
+
+
+<input class="jscolor" id="furColorCode" value="ab2567"><br>
+<input class="jscolor" id="eyeColorCode" value="ab2567"><br>
+
+<input type="number" id="age"><br>
+<select id="familySet">
+    <option>Choose a Family Set</option>
+</select><br>
+<input type="number" id="strMark"><br>
+<input type="number" id="agiMark"><br>
+<input type="number" id="intMark"><br>
+
+<input type="submit" id="createWolf" value="Submit wolf"><br>
+<input type="button" id="test" value="test">
 
 </body>
 <script src="models.js"></script>
 <script src="modules/envModule.js"></script>
-
+<script src="footer.js"></script>
 </html>

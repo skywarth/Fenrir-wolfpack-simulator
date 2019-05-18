@@ -19,7 +19,7 @@ $(" #createEnv").click(function(){
 
 
     let biomeObj = biomeTemplates.find(function(element) {
-        return element.id =$("#biomeTemplates").val();
+        return element.id ==$("#biomeTemplates").val();
     });
     let water=$("#water").val();
     let temp={tempLow:$("#tempLow").val(),tempMed:$("#tempMed").val(),tempHigh:$("#tempHigh").val()}
