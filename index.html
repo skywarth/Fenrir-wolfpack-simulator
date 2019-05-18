@@ -12,14 +12,51 @@ test
 
 
 
-    <select id="axa">
-        <option>Choose a number</option>
+    <select id="biomeTemplates">
+        <option>Choose a biome</option>
     </select>
 
-<input type="text" id="name">
-<input type="submit" value="Submit">
 
 
+<br>
+
+<select id="water">
+    <option value="high">High</option>
+    <option value="medium">Medium</option>
+    <option value="low">Low</option>
+    <option value="none">None</option>
+</select><br>
+<input type="text" id="tempLow"><input type="text" id="tempMed"><input type="text" id="tempHigh"><br>
+<input type="text" id="rainFreq"><br>
+<select id="greenDensity">
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+</select><br>
+<select id="climateBias">
+    <option>Frost</option>
+    <option>Tornado</option>
+    <option>Constant Rain</option>
+    <option>Fog</option>
+    <option>None</option>
+</select><br>
+<select id="surroundings">
+    <option>Calm</option>
+    <option>Wilderness</option>
+    <option>Savage</option>
+</select><br>
+<input type="text" id="wildCardWolves"><br>
+<input type="text" id="predatorCount"><br>
+<select id="predatorThreat">
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+</select><br>
+<input type="text" id="preyCount"><br>
+
+
+<br>
+<input type="submit" id="createEnv" value="Submit">
 </body>
 <script src="models.js"></script>
 <script src="modules/envModule.js"></script>
