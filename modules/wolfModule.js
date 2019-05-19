@@ -78,8 +78,9 @@ $(" #createWolf").click(function(){
     let agiMark=$("#agiMark").val();
     let intMark=$("#intMark").val();
 
-    var wolfDef=new definitiveFields(wolfTagID,wolfNickname,wolfAnatomicSizes,diseases,characteristics,furColorCode,eyeColorCode,age,familySetObj,strMark,agiMark,intMark);
-
+    let wolfDef=new definitiveFields(wolfTagID,wolfNickname,wolfAnatomicSizes,diseases,characteristics,furColorCode,eyeColorCode,age,familySetObj,strMark,agiMark,intMark);
+    let wolfStructural=new structuralFields($("#generationNumber").val());
+    wolves.push(new wolf(wolfDef,wolfStructural));
     console.log(wolfDef);
 });
 
