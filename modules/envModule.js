@@ -1,3 +1,9 @@
+
+let environment;
+
+
+let currentPreyCount=0;
+
 var select = document.getElementById("biomeTemplates");
 
 for(var i = 0; i < biomeTemplates.length; i++) {
@@ -32,10 +38,11 @@ $(" #createEnv").click(function(){
     let predatorThreat=$("#predatorThreat").val();
     let preyCount=$("#preyCount").val();
 
-    var env=new enviroment(biomeObj,water,temp,rainFreq,greenDensity,climateBias,surroundings,wildCardWolves,predatorCount,predatorThreat,preyCount);
-
-    console.log(env.temperature.tempMed);
-    console.log(env);
+    const env=new environmentModel(biomeObj,water,temp,rainFreq,greenDensity,climateBias,surroundings,wildCardWolves,predatorCount,predatorThreat,preyCount);
+    env.preyType=$("#preyType").val();
+    environment=env;
+    currentPreyCount=environment.preyCount;
+    console.log(environment);
 });
 
 
