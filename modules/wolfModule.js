@@ -1,6 +1,4 @@
-
-
-
+//test
 let div=document.getElementById("diseases");
 
 let diseaseCounter=1;
@@ -36,20 +34,20 @@ $(document).ready(function() {
     });
 });
 
-var select = document.getElementById("familySet");
+var selectWolfFamilySet = document.getElementById("familySet");
 
 for(var i = 0; i < biomeTemplates.length; i++) {
     var opt = biomeTemplates[i].name;
     var el = document.createElement("option");
     el.textContent = opt;
     el.value = biomeTemplates[i].id;
-    select.appendChild(el);
+    selectWolfFamilySet.appendChild(el);
 }
 
 
 
 
-$(" #createWolf").click(function(){
+$(" #createWolf").click(function(){//wolf creation
 
 
     let wolfTagID=$("#tagID").val();
@@ -72,7 +70,7 @@ $(" #createWolf").click(function(){
     let eyeColorCode=$("#eyeColorCode").val();
     let age=$("#age").val();
     let familySetObj = biomeTemplates.find(function(element) {
-        return element.id ==$("#familySet").val();
+        return element.id ==$("#familySet option:selected").val();
     });
     let strMark=$("#strMark").val();
     let agiMark=$("#agiMark").val();
@@ -82,6 +80,8 @@ $(" #createWolf").click(function(){
     let wolfStructural=new structuralFields($("#generationNumber").val());
     wolves.push(new wolf(wolfDef,wolfStructural));
     console.log(wolfDef);
+    $('#wolfForm')[0].reset();
+    alert("Added wolf");
 });
 
 

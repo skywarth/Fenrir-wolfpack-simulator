@@ -6,14 +6,16 @@
     <title>Title</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jscolor.js"></script>
+    <script src="js/chance.min.js"></script>
+    <script src="data-trees/heap-master/heap.js"></script>
 
 
 </head>
 <body style="background-color: black;">
-test
+<label style="color:white;font-family: 'Arial Black'">Enviroment creation</label><br>
 
 
-
+    <label style="color:white;font-family: 'Arial'">Enviroment biome Template: </label>
     <select id="biomeTemplates">
         <option>Choose a biome</option>
     </select>
@@ -21,20 +23,24 @@ test
 
 
 <br>
-
+    <label style="color:white;font-family: 'Arial'">Water amount</label>
 <select id="water">
     <option value="high">High</option>
     <option value="medium">Medium</option>
     <option value="low">Low</option>
     <option value="none">None</option>
 </select><br>
+    <label style="color:white;font-family: 'Arial'">Temperature low, medium and high averages.</label>
 <input type="text" id="tempLow"><input type="text" id="tempMed"><input type="text" id="tempHigh"><br>
+    <label style="color:white;font-family: 'Arial'">Rain frequency</label>
 <input type="text" id="rainFreq"><br>
+    <label style="color:white;font-family: 'Arial'">Green Density</label>
 <select id="greenDensity">
     <option value="high">High</option>
     <option value="medium">Medium</option>
     <option value="low">Low</option>
 </select><br>
+    <label style="color:white;font-family: 'Arial'">Climate Bias</label>
 <select id="climateBias">
     <option value="frost">Frost</option>
     <option value="tornado">Tornado</option>
@@ -42,19 +48,30 @@ test
     <option value="fog">Fog</option>
     <option value="none">None</option>
 </select><br>
+    <label style="color:white;font-family: 'Arial'">Surroundings</label>
 <select id="surroundings">
     <option value="calm">Calm</option>
     <option value="wilderness">Wilderness</option>
     <option value="savage">Savage</option>
 </select><br>
+    <label style="color:white;font-family: 'Arial'">Wildcard Wolves Count</label>
 <input type="text" id="wildCardWolves"><br>
+    <label style="color:white;font-family: 'Arial'">Predator Count</label>
 <input type="text" id="predatorCount"><br>
+    <label style="color:white;font-family: 'Arial'">Predator Threat</label>
 <select id="predatorThreat">
     <option value="high">High</option>
     <option value="medium">Medium</option>
     <option value="low">Low</option>
 </select><br>
+    <label style="color:white;font-family: 'Arial'">Prey Count</label>
 <input type="text" id="preyCount"><br>
+    <label style="color:white;font-family: 'Arial'">Prey Type</label>
+<select id="preyType">
+    <option value="deer">Deer/Elk</option>
+    <option value="bison">Bison/Buffalo</option>
+    <option value="rabbit">Rabbit</option>
+</select><br>
 
 
 <br>
@@ -64,46 +81,82 @@ test
 <br><br>
 
 
-
-<span style="color: azure">Wolf</span><br>
+<form id="wolfForm">
+    <label style="color:white;font-family: 'Arial Black'">Wolf</label><br>
+<label style="color:white;font-family: 'Arial'">Wolf Tag Id </label>
 <input type="text" id="tagID"><br>
+<label style="color:white;font-family: 'Arial'">Wolf Nickname</label>
 <input type="text" id="nickname"><br>
 
 
-<span style="color: azure">Anatomic</span><br>
+<label style="color:white;font-family: 'Arial'">Wolf Anatomic Sizes</label><br>
+<label style="color:white;font-family: 'Arial'">Jaw</label>
 <input type="text" id="jaw"><br>
+<label style="color:white;font-family: 'Arial'">Foreleg Height</label>
 <input type="text" id="foreLegHeight"><br>
+<label style="color:white;font-family: 'Arial'">Paw Diameter</label>
 <input type="text" id="pawDiameter"><br>
+<label style="color:white;font-family: 'Arial'">Skull Diameter </label>
 <input type="text" id="skullDiameter"><br>
 
-
-<span style="color: azure">Diseases</span>
+<label style="color:white;font-family: 'Arial'">Diseases</label>
 
 
 <div class="" id="diseases">
 
 </div>
-<input type="button" id="addDisease"><br>
-
+<input type="button" id="addDisease" value="Add Disease"><br>
+<label style="color:white;font-family: 'Arial'">Characteristics </label>
 <input type="text" id="characteristics"><br>
 
-
+<label style="color:white;font-family: 'Arial'">Fur Color Code</label>
 <input class="jscolor" id="furColorCode" value="ab2567"><br>
+<label style="color:white;font-family: 'Arial'">Eye Color Code</label>
 <input class="jscolor" id="eyeColorCode" value="ab2567"><br>
-
+<label style="color:white;font-family: 'Arial'">Age</label>
 <input type="number" id="age"><br>
+<label style="color:white;font-family: 'Arial'">Family set biome</label>
 <select id="familySet">
     <option>Choose a Family Set</option>
 </select><br>
+<label style="color:white;font-family: 'Arial'">Strength Mark</label>
 <input type="number" id="strMark"><br>
+<label style="color:white;font-family: 'Arial'">Agility Mark </label>
 <input type="number" id="agiMark"><br>
+<label style="color:white;font-family: 'Arial'">Intelligence Mark </label>
 <input type="number" id="intMark"><br>
 
-<input type="submit" id="createWolf" value="Submit wolf"><br>
-<input type="button" id="test" value="test">
+<label style="color:white;font-family: 'Arial'">Generation Number</label>
+<input type="number" id="generationNumber"><br>
+</form>
+<input type="button" id="createWolf" value="Submit wolf"><br>
 
+<br>
+<br>
+<input type="submit" id="startSim" value="Start Simulation"><br>
+<div id="simOutput">
+
+</div>
 </body>
+<script>
+    console.log(chance.bool({likelihood: 5}));
+</script>
 <script src="models.js"></script>
 <script src="modules/envModule.js"></script>
-<script src="footer.js"></script>
+<script src="modules/wolfModule.js"></script>
+<script src="modules/eventModule.js"></script>
+<script src="modules/parameterModule.js"></script>
+<script  src="modules/modifiers.js" ></script>
+<script  src="modules/dataTreeModule.js" ></script>
+<script  src="modules/simulationModule.js" ></script>
+
+
+<script>
+
+
+
+    //console.log(huntSuccessChance,biomeBasedHuntSuccessChance,constantChance,wolfHuntSuccessChance,activeClimateBasedBiasHuntChance,diseaseBasedHuntChance) ;
+</script>
+
+
 </html>
