@@ -22,3 +22,5 @@ Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla J
 ```
 npm i fenrir-wolfpack-simulation
 ```
+## License
+Licenced under the [MIT License](https://github.com/skywarth/Fenrir-wolfpack-simulator/blob/master/LICENSE)
