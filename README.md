@@ -22,5 +22,28 @@ Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla J
 ```
 npm i fenrir-wolfpack-simulation
 ```
+## Current Version
+Includes:
+* Max-heap tree for alpha determination and food distribution.
+* Regular Events.
+* Environment module (partial).
+* Constant parameters module.
+* Modifiers module for chance and likelihood calculation.
+* Variable parameter module.
+* Wolf data module.
+* Simulation module (initiating the simulation and generating reports).
+
+Brief capabilities:
+1. Create environment and it's object (input).
+2. Create one or more wolf objects (input).
+3. Calculate 7 hunt parameters which affect hunt success chance.
+4. Determine alpha of the pack considering alpha points calculated.
+5. Placement of wolf objects to max-heap tree according to alpha points.
+6. Hunt event conclusion.
+7. Food distribution order in pack.
+8. Weather event trigger.
+9. Scouting and results. (partial)
+10. Basic simulation loop.
+
 ## License
 Licenced under the [MIT License](https://github.com/skywarth/Fenrir-wolfpack-simulator/blob/master/LICENSE)
