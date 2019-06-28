@@ -2,6 +2,9 @@
 ![alt text][logo]
 
 [logo]: https://github.com/skywarth/Fenrir-wolfpack-simulator/blob/master/resc/fenrir-logo-black.png "Fenrir Wolfpack Simulator"
+
+[![npm version](https://badge.fury.io/js/fenrir-wolfpack-simulation.svg)](https://badge.fury.io/js/fenrir-wolfpack-simulation) [![GitHub version](https://badge.fury.io/gh/skywarth%2FFenrir-wolfpack-simulator.svg)](https://badge.fury.io/gh/skywarth%2FFenrir-wolfpack-simulator) [![Licence](https://img.shields.io/github/license/skywarth/Fenrir-wolfpack-simulator.svg)](https://github.com/skywarth/Fenrir-wolfpack-simulator/blob/master/LICENSE) [![Known Vulnerabilities](https://snyk.io//test/github/skywarth/Fenrir-wolfpack-simulator/badge.svg?targetFile=package.json)](https://snyk.io//test/github/skywarth/Fenrir-wolfpack-simulator?targetFile=package.json) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eed7a2a915f14a1a9cedfb22fb84fc59)](https://www.codacy.com/app/skywarth/Fenrir-wolfpack-simulator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=skywarth/Fenrir-wolfpack-simulator&amp;utm_campaign=Badge_Grade)
+
 Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla Javascript and data structures. 
 
 ### Simulation and prediction includes:
