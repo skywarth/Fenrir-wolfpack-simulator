@@ -1,4 +1,7 @@
 # Fenrir Wolfpack Simulator
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37b6db0ab6a843e1b5dded8332bb3b84)](https://app.codacy.com/app/skywarth/Fenrir-wolfpack-simulator?utm_source=github.com&utm_medium=referral&utm_content=skywarth/Fenrir-wolfpack-simulator&utm_campaign=Badge_Grade_Dashboard)
+
 ![alt text][logo]
 
 [logo]: https://github.com/skywarth/Fenrir-wolfpack-simulator/blob/master/resc/fenrir-logo-black.png "Fenrir Wolfpack Simulator"
