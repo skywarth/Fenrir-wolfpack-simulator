@@ -1,0 +1,28 @@
+{
+  "name": "fenrir-wolfpack-simulation",
+  "version": "1.0.5",
+  "description": "Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla Javascript and data structures.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skywarth/Fenrir-wolfpack-simulator.git",
+    "description": "Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla Javascript and data structures."
+  },
+  "keywords": [
+    "wolfpack",
+    "simulation",
+    "wolf",
+    "pack",
+    "javascript",
+    "simulation",
+    "fenrir"
+  ],
+  "author": "Yiğit Kürşad Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skywarth/Fenrir-wolfpack-simulator/issues"
+  }
+}
