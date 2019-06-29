@@ -25,6 +25,12 @@ Fenrir is an assistant to prognosticate the future of a wolfpack using vanilla J
 ```
 npm i fenrir-wolfpack-simulation
 ```
+
+## Demo
+http://fenrir.yigit.kim/
+
+**Demo of the current version doesn't have proper UI or interface design.** *To be designed in the future.*
+
 ## Current Version
 Includes:
 * Max-heap tree for alpha determination and food distribution.
